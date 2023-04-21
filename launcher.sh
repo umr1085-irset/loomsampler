@@ -12,6 +12,8 @@
 FILE=/path/to/my/loom/file.loom
 OUT=/path/to/my/loom/file.light.loom
 
+#----------------------------------------------------------------------------------------------
+
 # check if script is started via SLURM or bash
 # if with SLURM: there variable '$SLURM_JOB_ID' will exist
 # `if [ -n $SLURM_JOB_ID ]` checks if $SLURM_JOB_ID is not an empty string
@@ -28,4 +30,4 @@ SCRIPTPATH="$BASEPATH/loomsampler.py"
 
 . /local/env/envconda.sh # source conda
 conda activate /home/genouest/irset/privaud/.conda/envs/viewersampling # activate R environment
-python $SCRIPTPATH -f $FILE -o $OUT -s 20000 -t 25000 -m 10 -v 'Clusters|ArticleID'
+python $SCRIPTPATH -f $FILE -o $OUT -s 20000 -t 25000 -m 10 -v 'Clusters|ArticleID' # example

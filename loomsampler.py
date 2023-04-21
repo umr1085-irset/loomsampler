@@ -136,6 +136,5 @@ if __name__ == '__main__':
         attrs[k] = df.attrs[k] # assign
     attrs['LOOM_SPEC_VERSION'] = loompy.__version__ # correct loompy version
     
-    loompy.create(OUTPUT_FILE, views, row_attrs=ra, col_attrs=ca, file_attrs=attrs) # create new loom file
-    
     df.close() # close original file
+    loompy.create(OUTPUT_FILE, views, row_attrs=ra, col_attrs=ca, file_attrs=attrs) # create new loom file

@@ -27,7 +27,7 @@ if __name__ == '__main__':
     parser.add_argument('-s','--sample', help='Number of items to sample. Optional, default is 20000', required=False)
     parser.add_argument('-t','--threshold', help='Threshold value for sampling. Optional, default is 25000', required=False)
     parser.add_argument('-m','--minimum', help='Minimum number of items per combination. Optional, default is 10', required=False)
-    parser.add_argument('-v','--vars', help='Variables to preserve representativity. Must be separated by | and. If not specifed, items will be randomly sampled', required=False)
+    parser.add_argument('-v','--vars', help='Variables to preserve representativity. Must be separated by `|`. If not specifed, items will be randomly sampled', required=False)
 
     args = vars(parser.parse_args())
     print(args)

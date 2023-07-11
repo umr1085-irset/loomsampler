@@ -112,7 +112,7 @@ if __name__ == '__main__':
                 idx.append(subidx) # save indices
             else: # else if number of items is above threshold
                 to_sample = int(np.ceil(num_subidx*perc_to_sample)) # compute number of items to sample for combination
-                if to_sample <= BARE_MINIMUM: to_sample = 10 # minimum to sample is 10
+                if to_sample <= BARE_MINIMUM: to_sample = BARE_MINIMUM # minimum to sample is 10
                 idx.append(np.random.choice(subidx, to_sample, replace=False)) # save sampled indices
         idx = np.sort(np.concatenate(idx)) # concatenate and sort indices
     
